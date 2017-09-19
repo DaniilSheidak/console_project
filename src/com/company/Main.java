@@ -1,19 +1,20 @@
 package com.company;
 
 
+import com.company.student.Student;
+
 import java.util.Date;
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
+
 //        testSwitch(5);
 
-        int checkedValue = 8;
-        String resultMessage = testIf (checkedValue);
-        printInConsole(resultMessage);
-
-
+//        int checkedValue = 8;
+//        String resultMessage = testIf (checkedValue);
+//        printInConsole(resultMessage);
 
 //        testFor(7, 4);
 //        long[] numbers = testWhile(10);
@@ -22,6 +23,32 @@ public class Main {
 //        String someValue = "balonka";
 //        String userName = defineUserName(someValue);
 //        printInConsole(userName);
+
+        playWithStudents();
+    }
+
+    public static void playWithStudents (){
+        String id = new String("kj65jj");
+        int course = 3;
+        String faculty = "FPMI";
+        String name = "Nick";
+        Student student1 = new Student(id,course, faculty, name);//object 1
+        Student student2 = new Student("h4j34k", 2, "FMO", "Vasja");//object 2
+        Student student3 = student1;//first obj there
+        student1 = student2;//second obj there
+        student1.faculty = "giust";//second obj modified
+//        System.out.println(student3.faculty);
+
+
+        System.out.println(student2.passExam());//t
+        System.out.println(student1.passExam());//t
+        student2.retire();//student2.id=""
+        System.out.println(student1.passExam());//f
+        System.out.println(student2.passExam());//f
+        System.out.println(student3.passExam());//t
+        student1.recover("j9f9dj");
+        System.out.println(student2.passExam());//t
+
 
     }
 
@@ -61,7 +88,7 @@ public class Main {
         int remainder = value % 2;
         if (remainder == 0) {
 //            System.out.println("even");
-            return "even";
+            return new String("even");
         } else {
 //            System.out.println("not even");
             return "not even";
