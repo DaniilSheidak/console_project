@@ -1,9 +1,9 @@
 package com.company;
 
 
+import com.company.money.Money;
+import com.company.money.RUB;
 import com.company.student.Student;
-
-import java.util.Date;
 
 public class Main {
 
@@ -24,19 +24,25 @@ public class Main {
 //        String userName = defineUserName(someValue);
 //        printInConsole(userName);
 
-        playWithStudents();
+//        playWithStudents1();
+//        playWithStudents2();
+
+        RUB rub1 = new RUB();
+        rub1.getValue();
+
+
     }
 
-    public static void playWithStudents (){
+    public static void playWithStudents1() {
         String id = new String("kj65jj");
         int course = 3;
         String faculty = "FPMI";
         String name = "Nick";
-        Student student1 = new Student(id,course, faculty, name);//object 1
+        Student student1 = new Student(id, course, faculty, name);//object 1
         Student student2 = new Student("h4j34k", 2, "FMO", "Vasja");//object 2
         Student student3 = student1;//first obj there
         student1 = student2;//second obj there
-        student1.faculty = "giust";//second obj modified
+        student1.setFaculty("giust");//second obj modified
 //        System.out.println(student3.faculty);
 
 
@@ -50,6 +56,22 @@ public class Main {
         System.out.println(student2.passExam());//t
 
 
+    }
+
+    public static void playWithStudents2() {
+        String id = new String("kj65jj");
+        int course = 3;
+        String faculty = "FPMI";
+        String name = "Nick";
+        Student student1 = new Student(id, course, faculty, name);//object 1
+        Student student2 = new Student("h4j34k", 2, "FMO", "Vasja");//object 2
+
+        Student student3 = new Student();
+
+        System.out.println(student1.getFaculty());
+        String newFaculty = "giust";
+        student1.setFaculty(newFaculty);
+        System.out.println(student1.getFaculty());
     }
 
     public static void testSwitch(int value) {
@@ -125,7 +147,7 @@ public class Main {
         }
     }
 
-    public static void printInConsole (String message) {
-        System.out.println (message);
+    public static void printInConsole(String message) {
+        System.out.println(message);
     }
 }

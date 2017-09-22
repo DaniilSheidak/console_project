@@ -6,7 +6,7 @@ package com.company.student;
 public class Student {
     public String id;
     public int course;
-    public String faculty;
+    private String faculty;
     public String name;
 
     public Student () {
@@ -22,6 +22,7 @@ public class Student {
         this.faculty = faculty;
         this.name = name;
     }
+
 
     public boolean passExam() {
         if (id != "") {
@@ -39,4 +40,11 @@ public class Student {
         return  true;
     }
 
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
 }
