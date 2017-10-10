@@ -1,8 +1,8 @@
 package com.company;
 
 
-import com.company.money.Money;
-import com.company.money.RUB;
+import com.company.chapter1.variation.a.Greeting;
+import com.company.chapter1.variation.a.RandomGenerator;
 import com.company.student.Student;
 
 public class Main {
@@ -27,9 +27,14 @@ public class Main {
 //        playWithStudents1();
 //        playWithStudents2();
 
-        RUB rub1 = new RUB();
-        rub1.getValue();
+//        RUB rub1 = new RUB();
+//        rub1.getValue();
 
+//        Greeting greeting = new Greeting();
+//        greeting.greeting();
+
+        RandomGenerator randomGenerator = new RandomGenerator();
+        randomGenerator.processNumbers();
 
     }
 
