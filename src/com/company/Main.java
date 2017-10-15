@@ -41,7 +41,7 @@ public class Main {
         int course = 3;
         String faculty = "FPMI";
         String name = "Nick";
-        Student student1 = new Student(id, course, faculty, name);//object 1
+        Student student1 = new Student(id, course, faculty, name);//object 1.
         Student student2 = new Student("h4j34k", 2, "FMO", "Vasja");//object 2
         Student student3 = student1;//first obj there
         student1 = student2;//second obj there
