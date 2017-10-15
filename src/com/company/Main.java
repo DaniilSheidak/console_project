@@ -27,8 +27,6 @@ public class Main {
 //        playWithStudents1();
 //        playWithStudents2();
 
-//        RUB rub1 = new RUB();
-//        rub1.getValue();
 
 //        Greeting greeting = new Greeting();
 //        greeting.greeting();
